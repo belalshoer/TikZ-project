@@ -16,9 +16,40 @@ scripts/
 data/
 └── stable_qids.json
 ```
- 
+  
 ---
  
+## Installation
+ 
+### 1. DeTikZify
+ 
+Install DeTikZify via pip:
+ 
+```bash
+pip install 'detikzify[legacy] @ git+https://github.com/potamides/DeTikZify'
+```
+ 
+> The `[legacy]` extra is only needed for DeTikZifyv1 models. For DeTikZifyv2 only, you can drop it.
+ 
+ 
+DeTikZify also requires the following system dependencies — install them via your package manager:
+- **TeX Live 2023** (full installation)
+- **Ghostscript**
+- **Poppler**
+ 
+
+---
+ 
+### 2. Python Dependencies
+ 
+Install all required Python packages:
+ 
+```bash
+pip install torch torchvision transformers datasets pillow tqdm \
+            scikit-image numpy timm einops hf_transfer dreamsim
+```
+ 
+---
 ## Generation
  
 ### `generate_images.py`
